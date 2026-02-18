@@ -27,6 +27,17 @@ public class PalindromeCheckerApp {
         }
 
         System.out.println("Entered Text: " + text);
+        String reversed = "";
+
+        // Manual reverse using loop
+        for (int i = text.length() - 1; i >= 0; i--) {
+            reversed = reversed + text.charAt(i);
+        }
+
+        boolean isPalindrome = text.equalsIgnoreCase(reversed);
+
+        System.out.println("Entered Text: " + text);
+        System.out.println("Reversed Text: " + reversed);
         System.out.println("Is it Palindrome? : " + isPalindrome);
 
         scanner.close();
